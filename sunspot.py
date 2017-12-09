@@ -45,6 +45,7 @@ for line in cont:
 		data.append([float(n) for n in line.split()])
 print(data)
 swo = [row[2] for row in data]
+print(swo)
 ri = [row[3] for row in data]
 times = [row[0] + row[1] / 12.0 for row in data]
 
@@ -56,11 +57,11 @@ lp.y = 200
 lp.height = 125
 lp.width = 300
 lp.data = []
-#lp.lines[0].strokeColor = colors.blue
-#lp.lines[1].strokeColor = colors.yellow
-lp.lines[0].strokeColor = PCMYKColor(0,100,100,40,alpha=100)
-lp.lines[1].strokeColor = PCMYKColor(100,0,90,50,alpha=100)
-drawing.colorNamePairs = [(PCMYKColor(0,100,100,40,alpha=100), 'Bovis Homes'), (PCMYKColor(100,0,90,50,alpha=100), 'HSBC Holdings')]
+lp.lines[0].strokeColor = colors.blue
+lp.lines[1].strokeColor = colors.yellow
+#lp.lines[0].strokeColor = PCMYKColor(0,100,100,40,alpha=100)
+#lp.lines[1].strokeColor = PCMYKColor(100,0,90,50,alpha=100)
+#drawing.colorNamePairs = [(PCMYKColor(0,100,100,40,alpha=100), 'Bovis Homes'), (PCMYKColor(100,0,90,50,alpha=100), 'HSBC Holdings')]
 swo_2=zip(times,swo)
 ri_2=zip(times,ri)
 l=[]
